@@ -13,19 +13,20 @@ Domain Path: /languages
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-add_action('template_redirect', 'start_fade');
-
 function start_fade() {
 
     // https://developer.wordpress.org/reference/functions/wp_enqueue_style/
-    /*
-    var previous_opacity = document.body.style.opacity;
-    document.body.style.transition: "opacity 0.5s";
-    document.body.style.opacity = 0.2;
-    */
+    // https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+    $handle = "load-fade";
+    $src = plugins_url( '/load-fade.js', __FILE__ );
+    $deps = array();
+    $ver = false;
+    $in_footer = false;
 
+    // Register
+    wp_register_script( $handle, $src, $deps, $ver, $in_footer );
+    // Then Enqueue
+    wp_enqueue_script( $handle );
 }
 
-function stop_fade() {
-
-}
+add_action( 'wp_enqueue_scripts', 'start_fade' );
