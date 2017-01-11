@@ -1,12 +1,5 @@
-
-// Before page load
-// var previous_opacity = document.body.style.opacity/;
-//<script>...</script>
-document.body.style.transition = "opacity 0.5s";
-document.body.style.opacity = 0.2;
-
-// After page load
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.body.style.transition = "opacity 0s";
-    //document.body.style.opacity = 1;
+jQuery( window ).on("beforeunload", function() {
+    document.body.style.transition = "opacity {delay}ms".replace('{delay}', parseFloat(lf_conf.delay));
+    document.body.style.opacity = parseFloat(lf_conf.opacity) ;
 });
+
