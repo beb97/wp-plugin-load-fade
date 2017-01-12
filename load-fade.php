@@ -19,7 +19,7 @@ function load_fade_js() {
 
     // 1) Register
     $handle = 'load-fade';
-    $src = plugins_url( '/load-fade.js', __FILE__ );
+    $src = plugins_url( '/js/load-fade.js', __FILE__ );
     $deps = array('jquery');
     wp_register_script( $handle, $src, $deps );
 
@@ -34,8 +34,26 @@ function load_fade_js() {
     wp_enqueue_script( $handle );
 }
 
-// HOOK
+function load_fade_action_links( $links ) {
+    $link = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=load-fade') ) .'">'.__('Settings','load-fade').'</a>';
+    // Ajoute le lien avant les autres liens
+    array_unshift ($links,  $link);
+    return $links;
+}
+
+function load_fade_load_textdomain() {
+    load_plugin_textdomain( 'load-fade', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+
+// HOOK pour l'ajout du textdoamin (traduction)
+add_action( 'plugins_loaded', 'load_fade_load_textdomain' );
+
+// HOOK pour l'ajout du JS
 add_action( 'wp_enqueue_scripts', 'load_fade_js' );
+
+// Hook pour l'ajout du lien settings dans la page des plugins
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'load_fade_action_links' );
+
 
 include( plugin_dir_path( __FILE__ ) . 'options.php');
 ?>

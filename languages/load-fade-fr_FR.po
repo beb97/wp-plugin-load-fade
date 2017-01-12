@@ -1,0 +1,33 @@
+# This file is distributed under the same license as the load-fade plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: load-fade\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-11 08:39+0200\n"
+"PO-Revision-Date: 2017-01-12 14:41+0100\n"
+"Last-Translator: beb97\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.11\n"
+
+# msgctxt "area"
+#: inc/batch-installer.php:58
+msgid "Fade transition duration (ms) :"
+msgstr "Durée de transition du fondu (ms) :"
+
+#   msgctxt "area"
+msgid "Fade opacity final (0-1) :"
+msgstr "Opacité finale du fondu (invisible) 0.0 - 1.0 (visible) :"
+
+msgid "Fading options :"
+msgstr "Options de fondu :"
+
+msgid "Manage load fade settings"
+msgstr "Gérer les options de Load fade"
+
+msgid "Settings"
+msgstr "Réglages"

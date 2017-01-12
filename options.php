@@ -5,7 +5,6 @@
 add_action( 'admin_menu', 'lf_add_admin_menu' );
 add_action( 'admin_init', 'lf_settings_init' );
 
-
 function lf_add_admin_menu(  ) {
     add_options_page( 'Load fade', 'Load fade', 'manage_options', 'load-fade', 'lf_options_page' );
 
@@ -21,21 +20,20 @@ function lf_add_admin_menu(  ) {
 
 function lf_settings_init(  ) {
 
-
     register_setting( 'pluginPage', 'lf_settings' );
 
     add_settings_section(
         'lf_pluginPage_section',
-//        __( 'Manage load fade settings', 'load-fade' ),
-        'Manage load fade settings',
+        __( 'Manage load fade settings', 'load-fade' ),
+//        'Manage load fade settings',
         'lf_settings_section_callback',
         'pluginPage'
     );
 
     add_settings_field(
         'lf_int_delay',
-//        __( 'Fade delay (s) :', 'load-fade' ),
-        'Fade delay (ms) :',
+        __( 'Fade transition duration (ms) :', 'load-fade' ),
+//        'Fade delay (ms) :',
         'lf_int_delay_render',
         'pluginPage',
         'lf_pluginPage_section'
@@ -43,8 +41,8 @@ function lf_settings_init(  ) {
 
     add_settings_field(
         'lf_int_opacity',
-//        __( 'Fade opacity (0-1) :', 'load-fade' ),
-        'Fade opacity (0-1) :',
+        __( 'Fade opacity final (0-1) :', 'load-fade' ),
+//        'Fade opacity (0-1) :',
         'lf_int_opacity_render',
         'pluginPage',
         'lf_pluginPage_section'
@@ -68,8 +66,8 @@ function lf_int_opacity_render(  ) {
 }
 
 function lf_settings_section_callback(  ) {
-//    echo __( 'Fading options :', 'load-fade' );
-    echo 'Fading options :';
+    echo __( 'Fading options :', 'load-fade' );
+//    echo 'Fading options :';
 }
 
 
