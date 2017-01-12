@@ -5,10 +5,12 @@ Tested up to: 4.7
 License: GLP
 License URI: license.txt
 
-Fade body while loading.
+Fade your page while loading.
 
 == Description ==
-F a d e  b o d y  w h i l e  l o a d i n g.
+Fade your page's body while you load the next page.
+Fading opacity and delay can be set in options. 
+Default value : opacity:0.9 , delay:1000ms
 
 == Installation ==
 Deploy directory in /wp-content/plugins/
