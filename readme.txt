@@ -3,6 +3,8 @@ Contributors: beb97
 Donate link: https://www.paypal.me/beb97
 Tags: fade, load, loading, transparency
 Tested up to: 4.7
+Requires at least: 3.0
+Stable tag: trunk
 License: GLP
 License URI: license.txt
 
@@ -28,6 +30,6 @@ Since this pluggin uses a JS file, you might have to hard reload your JS. (CTRL+
 V1.1 Added translations (FR)
 V1.0 Creation
 
->== Frequently Asked Questions ==
+== Frequently Asked Questions ==
 = I don't really have a question, what sould I do ? =
 That is a good thing, to be honest I don't really have answers.
