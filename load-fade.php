@@ -3,7 +3,7 @@
 Plugin Name: Load Fade
 Plugin URI:
 Description: Fade your page while loading the next one.
-Version:     1.0
+Version:     1.1
 Author:      beb97
 Author URI: https://github.com/beb97
 License:     GPL2
